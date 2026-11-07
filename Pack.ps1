@@ -13,6 +13,7 @@ try {
     $zip = [IO.Compression.ZipArchive]::new($stream, [IO.Compression.ZipArchiveMode]::Create)
     try {
         # Explicit allow-list: never bundle host libraries, build caches or other mods.
+        [IO.Compression.ZipFileExtensions]::CreateEntryFromFile($zip, (Join-Path $PSScriptRoot 'LICENSE'), 'LICENSE') | Out-Null
         foreach ($name in @('WorldRescue.dll','WorldRescue.Core.dll','modinfo.json','icon.png')) {
             [IO.Compression.ZipFileExtensions]::CreateEntryFromFile($zip, (Join-Path $buildDir $name), $name) | Out-Null
         }

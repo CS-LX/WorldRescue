@@ -72,6 +72,12 @@ dotnet test Tests/WorldRescue.Tests.csproj -c Test
 
 预览是实际引擎绘制与受控交互验证，不等同于完整玩家世界进游戏验收；Android 触屏、复杂第三方方块、快照恢复和与其他加载拦截模组共存仍需实机回归。API 的传递依赖 ImageSharp 3.1.12 目前产生 NuGet 安全公告警告，未擅自替换游戏宿主程序集；发布时应配合宿主升级验证。
 
+## 许可证
+
+本项目采用 [MIT 许可证](LICENSE)，包括 v0.2.3 版本。版权归属为 `Copyright (c) 2026 Linxium`。
+
+第三方 Remix Icon v4.6.0 图标保留原有 [Apache License 2.0](Mod/ThirdParty/RemixIcon/LICENSE.txt) 授权及 [NOTICE](Mod/ThirdParty/RemixIcon/NOTICE.txt)，不适用本项目的 MIT 许可证。
+
 ## 参考
 
 - 宿主 `BuildFurnitureDialog` / `FurnitureDesignWidget`：旋转观察与三维预览坐标变换；未修改这些控件。
