@@ -1,0 +1,28 @@
+Mode: built-in image_gen; transparent_background=true.
+Output: ../Mod/icon.png (final generated PNG copied without alteration).
+
+Pass 1: smooth redraw; existing icon as edit target and the native UI atlas as style reference only.
+
+Use case: style-transfer.
+Asset type: finished transparent square mod-list icon, readable at 64x64 pixels.
+Image 1 is the EDIT TARGET: the current World Rescue icon.
+Image 2 is a STYLE REFERENCE ONLY: the native game's UI atlas. Observe its clean continuous diagonal lines, restrained white/gray symbols, and smooth antialiased contours. Do NOT copy the atlas, any individual existing symbol, or its background into the result.
+
+Redraw the EDIT TARGET into a clean smooth high-resolution geometric icon. Retain its subject and arrangement: a main isometric cube in front at lower-left, a second overlapping brick-red wireframe cube behind and upper-right, and a modest sage-green checkmark near the lower-right. Retain the transparent background. The meaning is overlapping saved objects being repaired.
+
+The requested change is specifically to REMOVE THE PIXEL-ART LOOK ENTIRELY. Every cube edge must be a perfectly continuous straight diagonal or vertical line, every corner clean and consistent, and the checkmark must have smooth continuous straight strokes. Absolutely no stair steps, pixel-grid snapping, serrated silhouettes, chunky pixel clusters, roughness, distressed edges, dithering, or texture.
+Use a light gray-white main cube outline, significantly thinner than in the edit target, with uniform stroke thickness, about 1/25 of the cube's edge length. Use simple muted charcoal-gray flat facets inside the main cube. Use matching medium-weight brick-red strokes for the secondary outline cube, with correct isometric perspective. The green checkmark should have a crisp smooth geometric shape, rounded line ends are acceptable. Flat simple graphical rendering, like a carefully authored SVG. Restrained palette: off-white, neutral gray, muted brick red, sage green. No gradients, no bloom, no glowing rim, no gold/cream lighting, no shadows.
+
+Centered compact composition with 10–12% clear transparent margin around the entire symbol. Distinct silhouettes and clean alpha edges, no white/black fringe.
+Preserve the abstract repair motif. No terrain, grass, dirt, game textures, existing game logos, text, letters, badges, UI panel, rounded-square backing, or other added elements. Deliver one finished icon only.
+
+Pass 2: optical alignment; approved smooth icon as edit target.
+
+Use case: precise-object-edit.
+The supplied transparent image is the approved final icon design. Change ONLY its placement within the square transparent canvas.
+
+Translate the ENTIRE existing group (both cubes AND the green checkmark together, as one rigid group) approximately 3 percent of the canvas width LEFT and 5 percent of the canvas height UP. The current icon feels visually bottom-right heavy; this small optical alignment adjustment should balance it in the frame.
+Keep the same square canvas dimensions and the same icon scale. Do not auto-crop to the contents or enlarge the symbol afterward. The top and left transparent margins should become modestly smaller; the bottom and right transparent margins should become modestly larger. Keep every element fully within the canvas.
+
+STRICT INVARIANTS: preserve all shapes, cube perspective, relative positions between the three elements, smooth straight edges, line widths, original colors, gray facets, checkmark shape and styling. Do not redesign, simplify, add details, alter strokes or change the material. No pixel-art steps, no texture, no new shadows, no extra outline, no text. Preserve the fully transparent alpha background.
+This is only a subtle upward-left repositioning of the already approved artwork, nothing else.

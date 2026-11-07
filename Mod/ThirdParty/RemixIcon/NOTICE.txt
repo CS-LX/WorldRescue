@@ -1,0 +1,4 @@
+Remix Icon v4.6.0 — Remix Design
+https://github.com/Remix-Design/RemixIcon/tree/v4.6.0
+Licensed under Apache License 2.0 (see LICENSE.txt).
+Modifications by World Rescue: selected SVGs rasterized at 96x96 with white fill and transparent backgrounds. Original SVGs are retained in Art/RemixIcon in the source distribution.

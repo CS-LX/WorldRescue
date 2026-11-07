@@ -1,0 +1,67 @@
+<Dialog xmlns="runtime-namespace:Game" xmlns:r="runtime-namespace:WorldRescue" HorizontalAlignment="Center" VerticalAlignment="Center">
+  <BevelledRectangleWidget BevelSize="3" />
+  <StackPanelWidget Direction="Vertical" Margin="16,12">
+    <CanvasWidget Size="Infinity,48">
+      <StackPanelWidget Direction="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+        <r:RescueIconWidget Size="32,32" Subtexture="{Textures/WorldRescue/Remix/shield-check-line}" Margin="8,0" />
+        <LabelWidget Name="Title" VerticalAlignment="Center" />
+      </StackPanelWidget>
+      <r:RescueIconButtonWidget Name="Help" Size="52,48" Margin="2,0" Subtexture="{Textures/WorldRescue/Remix/question-line}" HorizontalAlignment="Far" IconSize="28" />
+    </CanvasWidget>
+    <StackPanelWidget Direction="Horizontal" Margin="0,4">
+      <r:RescueIconButtonWidget Name="Previous" Size="60,52" Margin="2,0" Subtexture="{Textures/WorldRescue/Remix/arrow-left-s-line}" />
+      <CanvasWidget Size="Infinity,52">
+        <StackPanelWidget Direction="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center">
+          <LabelWidget Name="BlockName" HorizontalAlignment="Center" />
+          <LabelWidget Name="Location" HorizontalAlignment="Center" Color="192,192,192" />
+        </StackPanelWidget>
+      </CanvasWidget>
+      <r:RescueIconButtonWidget Name="Next" Size="60,52" Margin="2,0" Subtexture="{Textures/WorldRescue/Remix/arrow-right-s-line}" />
+    </StackPanelWidget>
+    <StackPanelWidget Direction="Horizontal" Margin="0,6">
+      <CanvasWidget Name="SceneColumn" Size="Infinity,Infinity">
+        <StackPanelWidget Direction="Vertical">
+          <CanvasWidget Size="Infinity,Infinity">
+            <BevelledRectangleWidget BevelSize="-2" CenterColor="0,0,0" />
+            <r:NeighborhoodWidget Name="Preview" Margin="4,4" />
+            <LabelWidget Name="SceneBadge" Margin="12,10" Color="255,128,128" IsHitTestVisible="false" />
+          </CanvasWidget>
+          <LabelWidget Name="Legend" HorizontalAlignment="Center" Margin="0,4" />
+          <StackPanelWidget Direction="Horizontal" HorizontalAlignment="Center">
+            <r:RescueIconButtonWidget Name="ZoomOut" Size="60,52" Margin="2,0" Subtexture="{Textures/WorldRescue/Remix/zoom-out-line}" />
+            <r:RescueIconButtonWidget Name="ZoomIn" Size="60,52" Margin="2,0" Subtexture="{Textures/WorldRescue/Remix/zoom-in-line}" />
+            <r:RescueIconButtonWidget Name="Rotate" Size="60,52" Margin="2,0" Subtexture="{Textures/WorldRescue/Remix/anticlockwise-line}" />
+            <r:RescueIconButtonWidget Name="Reset" Size="60,52" Margin="2,0" Subtexture="{Textures/WorldRescue/Remix/focus-3-line}" />
+            <r:RescueIconButtonWidget Name="Context" Size="60,52" Margin="2,0" Subtexture="{Textures/WorldRescue/Remix/eye-line}" />
+          </StackPanelWidget>
+        </StackPanelWidget>
+      </CanvasWidget>
+      <CanvasWidget Size="16,0" />
+      <CanvasWidget Name="RecordsColumn" Size="Infinity,Infinity">
+        <StackPanelWidget Direction="Vertical">
+          <LabelWidget Name="ChoiceTitle" Margin="4,0" />
+          <CanvasWidget Size="Infinity,80">
+            <ScrollPanelWidget Name="RecordTabsScroll" Direction="Horizontal">
+              <StackPanelWidget Name="RecordTabs" Direction="Horizontal" />
+            </ScrollPanelWidget>
+          </CanvasWidget>
+          <CanvasWidget Size="Infinity,Infinity">
+            <BevelledRectangleWidget BevelSize="-2" CenterColor="24,24,24" />
+            <ScrollPanelWidget Name="RecordsScroll" Direction="Vertical" Margin="12,8">
+              <StackPanelWidget Name="Records" Direction="Vertical" />
+            </ScrollPanelWidget>
+          </CanvasWidget>
+          <BevelledButtonWidget Name="Keep" Size="Infinity,52" Margin="0,6" />
+        </StackPanelWidget>
+      </CanvasWidget>
+    </StackPanelWidget>
+    <LabelWidget Name="Status" HorizontalAlignment="Center" Margin="0,4" />
+    <StackPanelWidget Direction="Horizontal">
+      <BevelledButtonWidget Name="Cancel" Size="160,56" />
+      <CanvasWidget Size="12,0" />
+      <BevelledButtonWidget Name="Suggest" Size="Infinity,56" />
+      <CanvasWidget Size="12,0" />
+      <BevelledButtonWidget Name="Apply" Size="Infinity,56" />
+    </StackPanelWidget>
+  </StackPanelWidget>
+</Dialog>

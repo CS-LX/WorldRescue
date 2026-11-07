@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="SurvivalcraftAPI.Survivalcraft" Version="1.9.3.1" />
+    <ProjectReference Include="../Core/WorldRescue.Core.csproj" />
+    <None Update="Assets/**/*;ThirdParty/**/*;modinfo.json;icon.png" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+</Project>
